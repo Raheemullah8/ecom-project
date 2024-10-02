@@ -1,0 +1,518 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --textcolor: rgb(227, 107, 14);
+    
+    --white: #ffffff;
+    --background: rgb(59, 59, 60);
+}
+
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: rgb(212, 211, 211);
+}
+
+nav {
+    display: flex;
+    height: 8vh;
+    justify-content: space-between;
+    background-color: var(--background);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+}
+
+nav .logo {
+    margin-left: 13px;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: 13px;
+}
+
+nav li {
+    list-style: none;
+    margin-inline: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+
+}
+
+nav a:hover,
+ul li a.active {
+    color: var(--textcolor);
+    font-weight: 600;
+
+}
+
+.Icon {
+    display: none;
+    align-items: center;
+    font-size: 30px;
+    margin-right: 13px;
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.main-text{
+    margin-left: 30px;
+}
+
+.main-text h1 {
+    font-size: 2.7rem;
+    color: var(--textcolor);
+}
+
+.main-text span {
+    color: var(--background);
+}
+
+.main-text h2 {
+    font-size: 2rem;
+    color: var(--textcolor);
+    transition: 0.5s ease-in-out;
+
+}
+
+.main-text h2:hover {
+    font-size: 2.1rem;
+    font-weight: bold;
+    opacity: 0.8;
+    color: var(--background);
+}
+
+.main-text p {
+    font-size: 1.2rem;
+    letter-spacing: 0.3;
+    opacity: 0.7;
+
+}
+
+.main-text button {
+    height: 35px;
+    width: 110px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: var(--textcolor);
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.main-text button:hover {
+    font-weight: 600;
+    background-color: rgb(206, 67, 16);
+    font-size: 1.2rem;
+    box-shadow: 10px 10px 10px rgb(76, 75, 75);
+
+}
+.main img{
+height: 80vh;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between cards */
+    margin-top: 40px;
+    margin-inline: 4px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px; /* Fixed width for cards */
+    text-align: center;
+    overflow: hidden; /* Ensures no overflow */
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+  
+}
+
+.card img {
+    width: 100%; /* Make image take full width of card */
+    height: 400px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure the image covers the container while maintaining its aspect ratio */
+    display: block; /* Remove any extra spacing */
+}
+
+.card i {
+    color: orange;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.head{
+    padding: 60px;
+    text-align: center;
+}
+.head h1 span{
+    color: var(--textcolor);
+}
+.revies{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+.revies .rcards{
+    width: 260px;
+    height: 240px;
+    background-color: #fff;
+    text-align: center;
+    padding: 13px;
+    margin-inline: 22px ;
+    transition: 1s ease-in-out;
+}
+.rcards:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+.rcards img{
+    border-radius: 50%;
+    width: 70%;
+   
+}
+.rcards p{
+    font-size: 14px;
+    opacity: 0.5;
+}
+.rcards button{
+    width: 120px;
+    height: 30px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    background-color: var(--textcolor);
+    transition: 0.5s;
+}
+.rcards button:hover{
+    background-color: rgb(203, 75, 28);
+    box-shadow: 5px 5px 5px gray;
+    font-weight: 400;
+}
+.blog{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.blogCards{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+    margin-inline:22px ;
+    text-align: center;
+    transition: 1s ease-in-out;
+}
+.blogCards:hover{
+    background-color: gray;
+    padding: 20px;
+    cursor: pointer;
+}
+.blogCards img{
+    border-radius: 5px;
+    width: 100%;
+}
+.blogCards a{
+    text-decoration: none;
+    background-color: var(--textcolor);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.blogCards a:hover{
+    font-weight: 500;
+    background-color: rgb(220, 95, 45);
+    font-size: 17px;
+    box-shadow: 5px 5px 5px gray;
+}
+.connect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.connect input{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.connect button{
+    
+   padding: 10px 20px;
+    text-align: center;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background-color: var(--textcolor);
+    color: var(--white);
+    transition: 0.5s ease-in-out;
+}
+.connect button:hover{
+    font-size: 17px;
+    box-shadow: 5px 5px 5px gray;
+    font-weight: bold;
+    background-color: rgb(186, 70, 21);
+}
+.footer{
+    padding: 30px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--background);
+    color: var(--white);
+}
+/* item  page css */
+.itempage{
+    display: none;
+    margin-top:35px;
+    margin-left: 20px;
+}
+.itempage img{
+    width: 400px;
+}
+.itempage .itemtext{
+    margin-inline: 22px;
+}
+.itemtext h2{
+    color: rgb(49, 133, 133);
+}
+.itemtext h2 span{
+    color: var(--textcolor);
+}
+.itemtext input{
+    width: 40px;
+    padding: 5px;
+    font-size: 17px;
+}
+.itemtext a{
+    background-color: red;
+    color: var(--white);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+#byBtn{
+    background-color: green;
+    color: var(--white);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+.itemtext a:hover{
+    font-weight: bold;
+    padding: 8px 12px;
+
+}
+/* Add these styles to your style.css */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.slide-up {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.slide-up.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.scale-up {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.scale-up.visible {
+    transform: scale(1);
+    opacity: 1;
+}
+.bypage{
+    display: none;
+    width: 30%;
+    padding: 22px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    background-color: var(--background);
+    color:var(--white);
+    top: 11%;
+
+}
+.bytext input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    background-color: rgb(252, 250, 250);
+    outline: none;
+    margin: 10px;
+    border-radius: 20px;
+} 
+.bytext select{
+    margin-inline: 10px;
+    padding: 7px;
+    outline: none;
+    border-radius: 10px;
+}
+.bytext{
+    padding: 40px   ;
+}
+.bytext button{
+    
+    padding: 7px;
+    outline: none;
+    padding: 7px 20px;
+    border: none;
+    font-weight: 500;
+    background-color: rgb(42, 131, 37);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(60, 224, 51);
+    transition: 0.5s ease-in-out;
+}
+.bytext button:hover{
+    background-color: rgb(48, 86, 9);
+    font-weight: bold;
+    padding: 8px 23px;
+}
+.cross i{
+    background-color: gray;
+    font-size: 28px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+@media only screen and (max-width:600px) {
+    nav ul {
+        display: none;
+
+    }
+
+    .Icon {
+        display: flex;
+    }
+
+    .ShowData {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        top: 55px;
+        text-align: center;
+        width: 100%;
+        height: 240px;
+        padding: 0%;
+        background-color: gray;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .main-text{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .main-text h2{
+        font-size: 1.7rem;
+    }
+    .main-text h1{
+        font-size: 2.2rem;
+    }
+    .main-text p{
+        font-size: 15px;
+    }
+    .main img{
+        width: 90%;
+    }
+   
+    .cards .card{
+        margin-top: 30px ;
+        text-align: center ;
+      
+    }
+    .rcards{
+        margin-top: 20px;
+    }
+    .blogCards{
+        margin-top: 20px;
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        text-align: center;
+    }
+    .footer .text{
+        width: 100%;
+    }
+    .footer .text .p1{
+        font-size: 15px;
+    }
+   
+}
